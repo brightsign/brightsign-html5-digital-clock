@@ -1,0 +1,13 @@
+/* Digital Clock */
+
+/* From http://www.fontspace.com/wlm-fonts/lets-go-digital, we could do better, but this one is free */
+@font-face {
+    font-family:"Let's go Digital";
+    src:url(digital.ttf);
+}
+
+@font-face {
+    font-family:"Arial Black";
+    src:url('Arial Black.ttf');
+}
+
