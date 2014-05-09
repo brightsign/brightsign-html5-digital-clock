@@ -12,7 +12,7 @@ All of the parameters, namely date-format, clock-style, timezone-in-minutes, fac
 http://localhost:63342/digital-clock/app/index.html#?format=format%3Dhh:mm:ss%20yyyy%20z%3Bfont%3DArial%20Black%3Bcolor%3Dred%3Bsize%3D45%3Bcaption%3Dfoo:%20%3Boffsetx%3D0%3Boffsety%3D0%3Bheight%3D371px%3Bwidth%3D950px%3Btimezone%3D420%3Balignment%3Dcenter%3Bopacity%3D0.5%3Bpath%3Dimages%2Fdigital-clock-face.jpeg
 
 date-format: In the URL, supply this as the "format" parameter:
-     - format: Required for digital clocks. The date format for the digital clock. See https://docs.angularjs.org/api/ng/filter/date for details. Default: hh:mm a.
+- format: Required for digital clocks. The date format for the digital clock. See https://docs.angularjs.org/api/ng/filter/date for details. Default: hh:mm a.
 
 clock-style: In the URL, supply the following parameter, which get concatenated as clock-style:
      - font: Optional. This is the font family. If used, the font file must be supplied. Default: ?
