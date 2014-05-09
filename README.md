@@ -14,7 +14,7 @@ http://localhost:63342/digital-clock/app/index.html#?format=format%3Dhh:mm:ss%20
 ## date-format: In the URL, supply this as the "format" parameter:
 - format: Required for digital clocks. The date format for the digital clock. See https://docs.angularjs.org/api/ng/filter/date for details. Default: hh:mm a.
 
-## clock-style: In the URL, supply the following parameter, which get concatenated as clock-style:
+## clock-style: In the URL, supply the following parameters, which get concatenated as clock-style:
 - font: Optional. This is the font family. If used, the font file must be supplied. Default: ?
 - color: Optional. The text color (digital clock) and hand color (analog clock). Default: black.
 - size: Optional. The font size (digital clock). If no units specified, use points; if -1, size is automatic. Default: ?
