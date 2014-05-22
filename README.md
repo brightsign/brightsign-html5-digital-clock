@@ -15,9 +15,9 @@ http://localhost:63342/digital-clock/app/index.html#?format=format%3Dhh:mm:ss%20
 - format: Required for digital clocks. The date format for the digital clock. See https://docs.angularjs.org/api/ng/filter/date for details. Default: hh:mm a.
 
 ## clock-style: In the URL, supply the following parameters, which get concatenated as clock-style:
-- font: Optional. This is the font family. If used, the font file must be supplied. Default: ?
+- font: Optional. This is the font family. If used, the font file must be supplied. Default: chosen by the BrightSign player
 - color: Optional. The text color (digital clock) and hand color (analog clock). Default: black.
-- size: Optional. The font size (digital clock). If no units specified, use points; if -1, size is automatic. Default: ?
+- size: Optional. The font size (digital clock). If no units specified, use points; if -1 or auto, size is automatic. Default: chosen by the BrightSign player
 - width, height: Required. In pixesl. Required for centering of text or hands
 - alignment: Optional. Text or hand alignment: left or near, center, right or far. Default: center. Note: vertical alignment is always centered.
 - offsetx, offsety: Optional. In pixesl. Offset of text (digital clock) and hands (analog clock) relative to the alignment. Default: 0,0.

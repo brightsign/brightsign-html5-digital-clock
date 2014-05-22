@@ -47,6 +47,10 @@ bsApp.controller('bsController', function ($scope, $interval, clockFormat) {
                     // auto means size the font to fit
                     $scope.fontSizeAuto = true;
                 }
+                else {
+                    // User supplied a font size with units
+                    $scope.clockStyle['font-size'] = fontSize;
+                }
             }
             if ((clockFormat.offsetx || clockFormat.offsety)) {
                 $scope.clockStyle['position'] = 'absolute';
