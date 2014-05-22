@@ -22,7 +22,6 @@ bsApp.controller('bsController', function ($scope, $interval, clockFormat) {
 
     function formatClock() {
         if (clockFormat) {
-            console.log(clockFormat);
             $scope.clockStyle = {};
             if (clockFormat.font) {
                 $scope.clockStyle['font-family'] = clockFormat.font;
@@ -31,19 +30,23 @@ bsApp.controller('bsController', function ($scope, $interval, clockFormat) {
                 $scope.clockStyle['color'] = clockFormat.color;
             }
             if (clockFormat.size) {
-                var fontSize = clockFormat.size;
+                var fontSize = clockFormat.size.trim();
                 $scope.fontSizeAuto = false;
                 if (isNumber(fontSize)) {
                     if (fontSize == -1) {
-                        // -1 means size the font to fit; we will ignore the font size attribute
+                        // -1 means size the font to fit
                         $scope.fontSizeAuto = true;
                     }
                     else {
                         // Interpret font sizes as points if units not specified
                         fontSize += 'pt';
+                        $scope.clockStyle['font-size'] = fontSize;
                     }
                 }
-                $scope.clockStyle['font-size'] = fontSize;
+                else if (fontSize === "auto") {
+                    // auto means size the font to fit
+                    $scope.fontSizeAuto = true;
+                }
             }
             if ((clockFormat.offsetx || clockFormat.offsety)) {
                 $scope.clockStyle['position'] = 'absolute';

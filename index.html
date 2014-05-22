@@ -1,6 +1,8 @@
 <html ng-app="bsApp">
 <head>
     <script src="angular.min.js"></script>
+    <script src="jquery-1.9.1.min.js"></script>
+    <script src="jquery.textfill.min.js"></script>
     <script src="app.js"></script>
     <script src="components.js"></script>
     <script src="controllers.js"></script>
@@ -9,6 +11,6 @@
 </head>
 <body ng-controller="bsController">
 <digital-clock date-format="{{dateFormat}}" clock-style="clockStyle"
-               timezone-in-minutes="{{timezoneInMinutes}}" face="{{face}}" caption="{{caption}}"></digital-clock>
+               timezone-in-minutes="{{timezoneInMinutes}}" face="{{face}}" caption="{{caption}}" font-size-auto="{{fontSizeAuto}}"></digital-clock>
 </body>
 </html>

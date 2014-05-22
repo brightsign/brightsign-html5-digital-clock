@@ -1,3 +1,4 @@
-<div><img ng-src="{{face}}" style="display: block; margin-left: auto; margin-right: auto">
-    <div ng-style="clockStyle">{{caption}}{{now|date:dateFormat}}</div>
+<div>
+    <img ng-src="{{face}}" style="display: block; margin-left: auto; margin-right: auto">
+    <div class="textFill" ng-style="clockStyle"><span>{{caption}}{{now|date:dateFormat}}</span></div>
 </div>
