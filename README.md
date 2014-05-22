@@ -1,4 +1,4 @@
-tightrope-digital-clock
+BrightSign Digital Clock
 =======================
 A digital clock component that can be used for any application, but was developed for Tightrope.
 
