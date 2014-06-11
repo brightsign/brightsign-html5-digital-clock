@@ -16,6 +16,6 @@ bsApp.factory('clockFormat', function ($location) {
     angular.forEach(myArgsAry, function (arg) {
         var myArgAry = arg.split('=');
         ret[myArgAry[0]] = myArgAry[1];
-    })
+    });
     return ret;
 });

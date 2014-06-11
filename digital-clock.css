@@ -2,12 +2,17 @@
 
 /* From http://www.fontspace.com/wlm-fonts/lets-go-digital, we could do better, but this one is free */
 @font-face {
-    font-family:"Digital";
-    src:url(digital.ttf);
+    font-family: "Digital";
+    src: url(digital.ttf);
 }
 
 @font-face {
-    font-family:"Arial Black";
-    src:url('Arial Black.ttf');
+    font-family: "Arial Black";
+    src: url('Arial Black.ttf');
 }
 
+/* Override the user agent stylesheet margins */
+* {
+    margin: 0;
+    padding: 0;
+}
