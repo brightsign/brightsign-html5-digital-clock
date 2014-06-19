@@ -7,6 +7,7 @@ bsApp.directive('digitalClock', function ($interval, $filter, $timeout) {
             dateFormat: '@',
             // = because can set font size when doing automatic sizing
             clockStyle: '=',
+            faceStyle: '=',
             timezoneInMinutes: '@',
             caption: '@',
             face: '@',

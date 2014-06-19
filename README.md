@@ -27,7 +27,7 @@ http://localhost:63342/digital-clock/app/index.html#?format=format%3Dhh:mm:ss%20
 - timezone: Optional. In minutes relative to UTC. This overrides the time on the BS player. Default: same as the player's timezone.
 
 ## face: In the URL, supply this as the "path" parameter:
-- path: Optional. Path or URL to the clock background image. Default: none.
+- path: Optional. Path or URL to the clock background image. Clock image is scaled to match width, height. Default: none.
 
 ## caption:
 - caption: Optional. Text that appears before the time in a digital clock. Default: none.

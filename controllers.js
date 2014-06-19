@@ -99,8 +99,16 @@ bsApp.controller('bsController', function ($scope, $interval, clockFormat) {
                 $scope.clockStyle['width'] = clockFormat.width;
             }
 
+            $scope.faceStyle = {
+                'display': 'block',
+                'margin-left': 'auto',
+                'margin-right': 'auto'
+            };
             if (clockFormat.path) {
                 $scope.face = clockFormat.path;
+                // Scale the background image
+                $scope.faceStyle['width'] = clockFormat.width;
+                $scope.faceStyle['height'] = clockFormat.height;
             }
             // Date format
             if (clockFormat.format) {
