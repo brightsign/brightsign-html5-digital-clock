@@ -30,11 +30,15 @@ bsApp.directive('digitalClock', function ($interval, $filter, $timeout) {
 
             }, 1000);
             $scope.now = new Date();
+            // This timeout enables the page to fully load before attempting to change the font.
             $timeout(function () {
                 if ($scope.$eval($scope.fontSizeAuto)===true) {
+                    // Run the auto-sizing algorithm
                     $(element).find('.textFill').textfill({ maxFontPixels: 1000 });
+                    // Switch from the temporary opacity of zero to the real value
+                    $(element).find('.textFill').css("opacity", $scope.clockStyle['opacity-tmp']);
                 }
-            });
+            }, 1000);
         }
     };
 });

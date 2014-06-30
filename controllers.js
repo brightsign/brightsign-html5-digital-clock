@@ -88,7 +88,14 @@ bsApp.controller('bsController', function ($scope, $interval, clockFormat) {
                 $scope.clockStyle['text-align'] = 'center';
             }
             if (clockFormat.opacity) {
-                $scope.clockStyle['opacity'] = clockFormat.opacity;
+                if ($scope.fontSizeAuto) {
+                    // Start with zero opacity so that the font doesn't change size before the viewer's eyes
+                    $scope.clockStyle['opacity-tmp'] = clockFormat.opacity;
+                    $scope.clockStyle['opacity'] = 0.0;
+                }
+                else {
+                    $scope.clockStyle['opacity'] = clockFormat.opacity;
+                }
             }
             if (clockFormat.height) {
                 $scope.clockStyle['height'] = clockFormat.height;
@@ -100,9 +107,7 @@ bsApp.controller('bsController', function ($scope, $interval, clockFormat) {
             }
 
             $scope.faceStyle = {
-                'display': 'block',
-                'margin-left': 'auto',
-                'margin-right': 'auto'
+                'display': 'block'
             };
             if (clockFormat.path) {
                 $scope.face = clockFormat.path;
