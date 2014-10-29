@@ -138,6 +138,12 @@ bsApp.controller('bsController', function ($scope, $interval, clockFormat) {
             if (clockFormat.caption) {
                 $scope.caption = clockFormat.caption;
             }
+            // Portrait mode
+            if (clockFormat.portrait === 'true') {
+                var transformStr = 'rotate(90deg)';
+                $scope.faceStyle['-webkit-transform'] = transformStr;
+                $scope.clockStyle['-webkit-transform'] = transformStr;
+            }
         }
     }
 
