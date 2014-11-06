@@ -10,8 +10,7 @@
     <link href="digital-clock.css" rel="stylesheet"/>
 </head>
 <body ng-controller="bsController">
-<!-- See http://www.w3.org/Style/Examples/007/center.en.html#vertical3 -->
-<div style="position: absolute; top: 50%; left: 50%; margin-right: -50%; -webkit-transform: translate(-50%, -50%)">
+<div id="main">
     <digital-clock date-format="{{dateFormat}}" clock-style="clockStyle" face-style="faceStyle"
                    timezone-in-minutes="{{timezoneInMinutes}}" face="{{face}}" caption="{{caption}}"
                    font-size-auto="{{fontSizeAuto}}"></digital-clock>

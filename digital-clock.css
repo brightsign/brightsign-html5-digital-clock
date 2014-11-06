@@ -16,3 +16,16 @@
     margin: 0;
     padding: 0;
 }
+
+/*  Center the main div.
+    See http://www.w3.org/Style/Examples/007/center.en.html#vertical3
+    See http://stackoverflow.com/questions/15464055/css-transition-effect-makes-image-blurry-moves-image-1px-in-chrome
+*/
+div#main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    -webkit-transform: translate(-50%, -50%) translateZ(0) scale(1.0, 1.0);
+    -webkit-backface-visibility: hidden;
+}
