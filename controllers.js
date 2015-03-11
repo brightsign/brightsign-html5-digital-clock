@@ -111,9 +111,10 @@ bsApp.controller('bsController', function ($scope, $interval, clockFormat) {
             };
             if (clockFormat.path) {
                 $scope.face = clockFormat.path;
-                // Scale the background image
-                $scope.faceStyle['width'] = clockFormat.width;
-                $scope.faceStyle['height'] = clockFormat.height;
+                // Scale the background image. Round it up to the next even number. This seems to be necessary,
+                // otherwise you can get a black line where the background doesn't quite fill the container
+                $scope.faceStyle['width'] = 2 * Math.round(parseInt(clockFormat.width) / 2);
+                $scope.faceStyle['height'] = 2 * Math.round(parseInt(clockFormat.height) / 2);
             }
             // Date format
             if (clockFormat.format) {
