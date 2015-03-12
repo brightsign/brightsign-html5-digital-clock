@@ -107,7 +107,11 @@ bsApp.controller('bsController', function ($scope, $interval, clockFormat) {
             }
 
             $scope.faceStyle = {
-                'display': 'block'
+                'display': 'block',
+                'position':'absolute',
+                'left':0,
+                'top':0,
+                'z-index':-1
             };
             if (clockFormat.path) {
                 $scope.face = clockFormat.path;
