@@ -8,6 +8,11 @@
     <script src="controllers.js"></script>
     <script src="services.js"></script>
     <link href="digital-clock.css" rel="stylesheet"/>
+    <script type="text/ng-template" id="digital-clock.html">
+        <div><img ng-src="{{face}}" style="display: block; margin-left: auto; margin-right: auto">
+            <div ng-style="clockStyle">{{caption}}{{now|date:dateFormat}}</div>
+        </div>
+    </script>
 </head>
 <body ng-controller="bsController">
 <div id="main">
