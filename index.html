@@ -1,7 +1,7 @@
 <html ng-app="bsApp">
 <head>
     <script src="angular.min.js"></script>
-    <script src="jquery-1.9.1.min.js"></script>
+    <script src="jquery.min.js"></script>
     <script src="jquery.textfill.min.js"></script>
     <script src="app.js"></script>
     <script src="components.js"></script>
@@ -10,7 +10,7 @@
     <link href="digital-clock.css" rel="stylesheet"/>
     <script type="text/ng-template" id="digital-clock.html">
         <div><img ng-src="{{face}}" style="display: block; margin-left: auto; margin-right: auto">
-            <div ng-style="clockStyle">{{caption}}{{now|date:dateFormat}}</div>
+            <div class="textFill" ng-style="clockStyle"><span>{{caption}}{{now|date:dateFormat}}</span></div>
         </div>
     </script>
 </head>

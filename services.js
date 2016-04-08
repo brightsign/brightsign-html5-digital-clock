@@ -7,8 +7,18 @@
  */
 bsApp.factory('clockFormat', function ($location) {
     var ret = {};
+    var myFormatArg = undefined;
     var myArgs = $location.search();
-    var myFormatArg = myArgs.format;
+    if (myArgs && myArgs.length > 0) {
+        myFormatArg = myArgs;
+    } else {
+        // Use the string after the hash as a backoff in case search() doesn't work
+        var re = /[\/\?]*(.*)/;
+        myArgs = $location.hash();
+        myFormatArg  = myArgs.replace(re, "$1");
+    }
+
+    console.log(JSON.stringify(myArgs));
     if (! myFormatArg) {
         return ret;
     }
